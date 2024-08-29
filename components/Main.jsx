@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 import { useEffect, useState } from "react";
 import { getPokemons } from "../lib/pokeapi";
 import { PokemonCard } from "./PokemonCard";
+import { Search } from "./Search";
 
 export function Main() {
   const [pokemons, setPokemons] = useState([]);
@@ -19,6 +20,7 @@ export function Main() {
       <View className="justify-center items-center pt-4">
         <Logo />
       </View>
+      <Search />
       {pokemons.length === 0 ? (
         <View className="flex-1 justify-center items-center">
           <ActivityIndicator color={"#fff"} size={"large"} />
