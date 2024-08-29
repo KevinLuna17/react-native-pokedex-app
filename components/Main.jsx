@@ -25,8 +25,9 @@ export function Main() {
         </View>
       ) : (
         <FlatList
+          horizontal
           data={pokemons}
-          keyExtractor={(pokemon) => pokemon.name}
+          keyExtractor={(pokemon) => pokemon.id}
           renderItem={({ item, index }) => (
             <PokemonCard pokemon={item} index={index} />
           )}
